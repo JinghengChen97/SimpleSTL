@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alloc_tester.dir/alloc_tester.cpp.o CMakeFiles/alloc_tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o  -o alloc_tester 
