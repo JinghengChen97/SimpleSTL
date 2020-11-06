@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named alloc_tester
+# Target rules for targets named TESTER_ALLOC
 
 # Build rule for target.
-alloc_tester: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 alloc_tester
-.PHONY : alloc_tester
+TESTER_ALLOC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TESTER_ALLOC
+.PHONY : TESTER_ALLOC
 
 # fast build rule for target.
-alloc_tester/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/build
-.PHONY : alloc_tester/fast
+TESTER_ALLOC/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/build
+.PHONY : TESTER_ALLOC/fast
 
 alloc_tester.o: alloc_tester.cpp.o
 
@@ -149,7 +149,7 @@ alloc_tester.o: alloc_tester.cpp.o
 
 # target to build an object file
 alloc_tester.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/alloc_tester.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/alloc_tester.cpp.o
 .PHONY : alloc_tester.cpp.o
 
 alloc_tester.i: alloc_tester.cpp.i
@@ -158,7 +158,7 @@ alloc_tester.i: alloc_tester.cpp.i
 
 # target to preprocess a source file
 alloc_tester.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/alloc_tester.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/alloc_tester.cpp.i
 .PHONY : alloc_tester.cpp.i
 
 alloc_tester.s: alloc_tester.cpp.s
@@ -167,7 +167,7 @@ alloc_tester.s: alloc_tester.cpp.s
 
 # target to generate assembly for a file
 alloc_tester.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/alloc_tester.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/alloc_tester.cpp.s
 .PHONY : alloc_tester.cpp.s
 
 home/ch/code/SimpleSTL/SimpleSTL/alloc.o: home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o
@@ -176,7 +176,7 @@ home/ch/code/SimpleSTL/SimpleSTL/alloc.o: home/ch/code/SimpleSTL/SimpleSTL/alloc
 
 # target to build an object file
 home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o
 .PHONY : home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o
 
 home/ch/code/SimpleSTL/SimpleSTL/alloc.i: home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.i
@@ -185,7 +185,7 @@ home/ch/code/SimpleSTL/SimpleSTL/alloc.i: home/ch/code/SimpleSTL/SimpleSTL/alloc
 
 # target to preprocess a source file
 home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.i
 .PHONY : home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.i
 
 home/ch/code/SimpleSTL/SimpleSTL/alloc.s: home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.s
@@ -194,7 +194,7 @@ home/ch/code/SimpleSTL/SimpleSTL/alloc.s: home/ch/code/SimpleSTL/SimpleSTL/alloc
 
 # target to generate assembly for a file
 home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/alloc_tester.dir/build.make CMakeFiles/alloc_tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TESTER_ALLOC.dir/build.make CMakeFiles/TESTER_ALLOC.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.s
 .PHONY : home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.s
 
 # Help Target
@@ -205,7 +205,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... alloc_tester"
+	@echo "... TESTER_ALLOC"
 	@echo "... alloc_tester.o"
 	@echo "... alloc_tester.i"
 	@echo "... alloc_tester.s"

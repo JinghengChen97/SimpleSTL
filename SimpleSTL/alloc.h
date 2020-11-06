@@ -1,7 +1,6 @@
 //
 // Created by ch on 2020/11/3.
 //
-
 #ifndef SIMPLESTL_ALLOC_H
 #define SIMPLESTL_ALLOC_H
 #include <stdlib.h> // for malloc() and free()
@@ -61,12 +60,7 @@ public:
     static void *Reallocate(void *p, size_t old_size, size_t new_size);
 };
 
-char *DefaultAlloc::start_free = nullptr;
-char *DefaultAlloc::end_free = nullptr;
-size_t DefaultAlloc::heap_size = 0;
-DefaultAlloc::Obj* volatile DefaultAlloc::free_lists[__NFREELISTS] = {
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
+
 }
 
 #endif //SIMPLESTL_ALLOC_H

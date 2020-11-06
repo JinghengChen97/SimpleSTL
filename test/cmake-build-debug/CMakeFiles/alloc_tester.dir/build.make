@@ -114,6 +114,8 @@ alloc_tester_EXTERNAL_OBJECTS =
 alloc_tester: CMakeFiles/alloc_tester.dir/alloc_tester.cpp.o
 alloc_tester: CMakeFiles/alloc_tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o
 alloc_tester: CMakeFiles/alloc_tester.dir/build.make
+alloc_tester: /usr/local/lib/libgtest.a
+alloc_tester: /usr/local/lib/libgtest_main.a
 alloc_tester: CMakeFiles/alloc_tester.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ch/code/SimpleSTL/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable alloc_tester"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/alloc_tester.dir/link.txt --verbose=$(VERBOSE)

@@ -1,5 +1,16 @@
-#include <alloc.h>
+#include "alloc.h"
 namespace simple_stl {
+
+char *DefaultAlloc::start_free = nullptr;
+char *DefaultAlloc::end_free = nullptr;
+size_t DefaultAlloc::heap_size = 0;
+DefaultAlloc::Obj* volatile DefaultAlloc::free_lists[__NFREELISTS] = {
+        nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr, nullptr, nullptr
+};
+
 void *DefaultAlloc::Allocate(size_t n) {
     Obj *volatile *current_free_list;
     Obj *result;
@@ -8,7 +19,7 @@ void *DefaultAlloc::Allocate(size_t n) {
         //get the list of the adequate blocks
         current_free_list = free_lists + FREELIST_INDEX(n);
         result = *current_free_list;
-        if (result == 0) { //if there is no available block in free list
+        if (result == nullptr) { //if there is no available block in free list
             return Refill(ROUND_UP(n));
         } else { //if there is an available block in free list
             *current_free_list = result->free_list_link; // renew the free list
@@ -84,18 +95,20 @@ char *DefaultAlloc::ChunkAlloc(size_t n, int &nobjs) { // n: bytes quantity of a
         }
         //get space from heap
         start_free = (char*) malloc(bytes_to_get);
-        if (start_free == 0) { //fail to get space from heap
-            //find if unsed and adequate blocks in free list
+        if (start_free == nullptr) { //fail to get space from heap
+            //find if unused and adequate blocks are in free list
             for (int i = n; i < __MAX_BYTES; i += __ALIGN) {
                 Obj* volatile* goal_free_list;
                 Obj* block;
                 goal_free_list = free_lists + FREELIST_INDEX(i);
                 block = *goal_free_list;
-                start_free = (char*)block;
-                end_free = start_free + i;
-                return ChunkAlloc(n, nobjs); //recursion to modify "nobjs"
+                if (block != nullptr) {
+                    start_free = (char*)block;
+                    end_free = start_free + i;
+                    return ChunkAlloc(n, nobjs); //recursion to modify "nobjs"
+                }
             }
-            end_free = 0;
+            end_free = nullptr;
         }
     }
     return nullptr;

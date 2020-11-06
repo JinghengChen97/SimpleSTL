@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tester.dir/alloc_tester.cpp.o CMakeFiles/tester.dir/home/ch/code/SimpleSTL/SimpleSTL/alloc.cpp.o  -o tester  /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a 

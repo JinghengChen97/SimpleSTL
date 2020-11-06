@@ -18,10 +18,18 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/FindGTest.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
+  "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/GoogleTest.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
   "/home/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -48,5 +56,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/alloc_tester.dir/DependInfo.cmake"
+  "CMakeFiles/TESTER_ALLOC.dir/DependInfo.cmake"
   )
